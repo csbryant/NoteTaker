@@ -8,6 +8,8 @@ Note Taker is an application where a user can post, save, and delete notes.
 
 Using Express, a user can save notes on the application, delete any notes that are no longer needed, etc. The user can also share the link to a friend, so the friend can look at, delete, or add notes.
 
+HTML routes and API routes are saved in the ROUTES folder and linked via the server.js file.
+
 
 # Credits
 
