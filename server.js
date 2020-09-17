@@ -13,17 +13,20 @@ const PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
+// API Routes
+// =============================================================
+require("./Routes/apiRoutes")(app);
 
 // HTML Routes
 // =============================================================
 require("./Routes/htmlRoutes")(app);
 
-// API Routes
+// Uses Public Folder
 // =============================================================
-require("./Routes/apiRoutes")(app);
+app.use(express.static("public"));
 
 // Listener
 // =============================================================
 app.listen(PORT, function() {
-    console.log("Applistening on PORT: " + PORT)
+    console.log("App listening on PORT: " + PORT)
 });
